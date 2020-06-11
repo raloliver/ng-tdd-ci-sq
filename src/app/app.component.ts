@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   person: any;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService?: AppService) { }
 
   ngOnInit() {
     this.getPerson('Luke');
