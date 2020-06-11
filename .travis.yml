@@ -15,13 +15,15 @@ script:
 # after_script:
 # before_deploy:
 deploy:
-  - provider: pages
-  - edge: true
-  - skip-cleanup: true
-  - github-token: $GITHUB_TOKEN
-  - local_dir: build
-  - on: 
-      branch: master
+  provider: pages
+  # edge: true
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: dist
+  target-branch: gh-pages
+  commit_message: "Deploy release ${TRAVIS_TAG}"
+  on: 
+    branch: master
 # after_deploy:
 
 
