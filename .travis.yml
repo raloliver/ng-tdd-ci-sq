@@ -20,8 +20,8 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local_dir: dist
-  target-branch: gh-pages
-  commit_message: "Deploy release ${TRAVIS_TAG}"
+  # target-branch: gh-pages
+  # commit_message: "Deploy release ${TRAVIS_TAG}"
   on: 
     branch: master
 # after_deploy:
