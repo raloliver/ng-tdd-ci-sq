@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "buildgp": "ng build --prod --base-href https://raloliver.github.io/ng-tdd-ci-sq/",
     "start:ci": "http-server ./dist/ng-tdd-ci-sq -a localhost -p 4200 -c-1"
   },
   "private": true,

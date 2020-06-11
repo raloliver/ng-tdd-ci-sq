@@ -1,9 +1,0 @@
-sonar.projectKey=raloliver_ng-tdd-ci-sq
-sonar.organization=raloliver
-sonar.host.url=https://sonarcloud.io
-sonar.projectName=ng-tdd-ci-sq
-sonar.projectVersion=1.0-SNAPSHOT
-
-sonar.language=javascript
-
-# sonar.exclusions=src/**/*.spec.ts,cypress/**/*,e2e/**/*,src/environments/**/*,src/test.ts,src/main.ts,src/karma.conf.js
