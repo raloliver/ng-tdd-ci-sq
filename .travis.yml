@@ -1,29 +1,24 @@
 language: node_js
-node_js: 
+node_js:
 - 12.16.2
 cache: npm
-
-# before_install:
 install:
-  - npm ci
-# before_script:
+- npm ci
 script:
-  - npm test
-  - npm run build
-# after_success:
-# after_failure:
-# after_script:
-# before_deploy:
+- sonar-scanner -Dsonar.verbose=true -X
+- npm test
+- npm run build
 deploy:
   provider: pages
-  # edge: true
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: "$GITHUB_TOKEN"
   local_dir: dist/ng-tdd-ci-sq
-  # target-branch: gh-pages
-  # commit_message: "Deploy release ${TRAVIS_TAG}"
-  on: 
+  on:
     branch: master
-# after_deploy:
+addons: 
+sonarcloud:
+  organization: raloliver
 
-
+env:
+  global:
+    secure: "$SONAR_TOKEN"
