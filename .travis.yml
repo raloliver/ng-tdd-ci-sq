@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- 12.16.2
+  - 12.16.2
 dist: trusty
 cache: npm
 addons: 
@@ -10,11 +10,11 @@ branches:
   only:
     - master
 install:
-- npm ci
+  - npm ci
 script:
-- npm test
-- npm run build
-- sonar-scanner
+  - npm test
+  - npm run build
+  - sonar-scanner
 deploy:
   provider: pages
   skip-cleanup: true
