@@ -15,9 +15,9 @@ branches:
 install:
   - npm ci
 script:
-  - sonar-scanner -Dsonar.verbose=true -X
   - npm test
   - npm run buildgp
+  - sonar-scanner
 deploy:
   provider: pages
   skip-cleanup: true
