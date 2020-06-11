@@ -4,8 +4,8 @@ node_js:
 dist: trusty
 cache: npm
 addons: 
-sonarcloud:
-  organization: raloliver
+  sonarcloud:
+    organization: raloliver
 branches:
   only:
     - master
