@@ -1,6 +1,3 @@
-env:
-  global:
-    secure: "$SONAR_TOKEN"
 language: node_js
 disty: trusty
 node_js:
@@ -15,9 +12,9 @@ branches:
 install:
   - npm ci
 script:
+  - sonar-scanner
   - npm test
   - npm run buildgp
-  - sonar-scanner
 deploy:
   provider: pages
   skip-cleanup: true
@@ -25,3 +22,6 @@ deploy:
   local_dir: dist/ng-tdd-ci-sq
   on:
     branch: master
+env:
+  global:
+    secure: "$SONAR_TOKEN"
