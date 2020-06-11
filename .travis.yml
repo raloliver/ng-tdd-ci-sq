@@ -1,13 +1,20 @@
 language: node_js
+disty: trusty
 node_js:
   - 12.16.2
 cache: npm
+addons: 
+  sonarcloud:
+    organization: raloliver
+branches:
+  only:
+    - master
 install:
   - npm ci
 script:
   - sonar-scanner -Dsonar.verbose=true -X
   - npm test
-  - npm run build
+  - npm run buildgp
 deploy:
   provider: pages
   skip-cleanup: true
@@ -15,10 +22,7 @@ deploy:
   local_dir: dist/ng-tdd-ci-sq
   on:
     branch: master
-addons: 
-sonarcloud:
-  organization: raloliver
 
-env:
-  global:
-    secure: "$SONAR_TOKEN"
+# env:
+#   global:
+#     secure: "$SONAR_TOKEN"
