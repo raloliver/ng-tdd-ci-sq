@@ -1,3 +1,6 @@
+env:
+  global:
+    secure: "$SONAR_TOKEN"
 language: node_js
 disty: trusty
 node_js:
@@ -22,7 +25,3 @@ deploy:
   local_dir: dist/ng-tdd-ci-sq
   on:
     branch: master
-
-# env:
-#   global:
-#     secure: "$SONAR_TOKEN"
