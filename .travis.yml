@@ -3,9 +3,9 @@ disty: trusty
 node_js:
   - 12.16.2
 cache: npm
-addons: 
-  sonarcloud:
-    organization: raloliver
+# addons: 
+#   sonarcloud:
+#     organization: raloliver
 branches:
   only:
     - master
@@ -25,3 +25,5 @@ deploy:
 env:
   global:
     secure: "$SONAR_TOKEN"
+notifications:
+  email: false
