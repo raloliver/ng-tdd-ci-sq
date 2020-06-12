@@ -12,7 +12,7 @@ branches:
 install:
   - npm ci
 script:
-  - sonar-scanner
+  # - sonar-scanner
   - npm test
   - npm run buildgp
 deploy:
