@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   constructor(private appService?: AppService) { }
 
   ngOnInit() {
+
     this.getPerson('Luke');
   }
 
@@ -21,6 +22,9 @@ export class AppComponent implements OnInit {
   }
 
   getPerson(name) {
-    return this.appService.getPerson(name).subscribe(res => this.person = res.results[0]);
+    return this.appService.getPerson(name).subscribe(res => { 
+      let results = [];
+      this.person = res.results[0] 
+    });
   }
 }
